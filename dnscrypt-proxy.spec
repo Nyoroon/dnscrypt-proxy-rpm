@@ -25,8 +25,8 @@ A flexible DNS proxy, with support for encrypted DNS protocols
 %build
 mkdir build
 ln -s vendor src
-ln -rs ${name} src/
-GOPATH=$PWD go build -ldflags="-s -w" -o build/${name} ${name}
+ln -rs %{name} src/
+GOPATH=$PWD go build -ldflags="-s -w" -o build/%{name} %{name}
 
 %install
 install -D -m 755 build/%{name} %{buildroot}%{_bindir}/%{name}
