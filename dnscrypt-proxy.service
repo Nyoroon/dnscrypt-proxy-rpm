@@ -1,0 +1,15 @@
+[Unit]
+Description=A flexible DNS proxy, with support for encrypted DNS protocols
+Documentation=https://github.com/jedisct1/dnscrypt-proxy/wiki
+After=network.target
+
+[Service]
+User=nobody
+ExecStart=/usr/bin/dnscrypt-proxy -config /etc/dnscrypt-proxy/dnscrypt-proxy.toml
+Restart=on-failure
+
+PrivateTmp=yes
+PrivateDevices=yes
+
+[Install]
+WantedBy=multi-user.target
