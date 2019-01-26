@@ -2,7 +2,7 @@
 
 Name:		dnscrypt-proxy
 Version:	2.0.19
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	A flexible DNS proxy, with support for encrypted DNS protocols
 License:	ISC
 URL:		https://github.com/jedisct1/%{name}
