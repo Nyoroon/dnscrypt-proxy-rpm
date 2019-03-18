@@ -1,8 +1,8 @@
 %define debug_package %{nil}
 
 Name:		dnscrypt-proxy
-Version:	2.0.20
-Release:	2%{?dist}
+Version:	2.0.21
+Release:	1%{?dist}
 Summary:	A flexible DNS proxy, with support for encrypted DNS protocols
 License:	ISC
 URL:		https://github.com/jedisct1/%{name}
@@ -40,7 +40,7 @@ install -D -m 644 %{name}/example-dnscrypt-proxy.toml %{buildroot}%{_sysconfdir}
 %systemd_preun %{name}.service
 
 %postun
-%systemd_postun %{name}.service
+%systemd_postun_with_restart %{name}.service
 
 %files
 %defattr(-,root,root,-)
