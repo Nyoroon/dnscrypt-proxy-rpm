@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
 Name:		dnscrypt-proxy
-Version:	2.0.21
+Version:	2.0.39
 Release:	1%{?dist}
 Summary:	A flexible DNS proxy, with support for encrypted DNS protocols
 License:	ISC
